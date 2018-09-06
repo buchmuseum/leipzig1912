@@ -50,4 +50,4 @@ OT_NAME_2018 Ortsteilname 2018
 
 ## Credits
 
-Die Daten wurden in den 1990er-Jahren im Deutschen Buch- und Schriftmuseum der Deutschen Nationalbibliothek aus dem historischen Adressbuch der Stadt Leipzig in eine Access-Datenbank übertragen. Die Geokoordinaten sowie die modernen Adressdaten wurden 2018 vom  Amt für Geoinformation und Bodenordnung, Abteilung Digitale Kartographie ergänzt.
+Die Daten wurden in den 1990er-Jahren im Deutschen Buch- und Schriftmuseum der Deutschen Nationalbibliothek aus dem historischen Adressbuch der Stadt Leipzig in eine Access-Datenbank übertragen. Die Geokoordinaten sowie die modernen Adressdaten wurden 2018 vom  Amt für Geoinformation und Bodenordnung, Abteilung Digitale Kartographie der Stadt Leipzig ergänzt.
