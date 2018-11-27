@@ -17,8 +17,6 @@ df_geo = df.dropna(subset=['ETRS_UTM33N_X', 'ETRS_UTM33N_Y'], axis=0, inplace=Fa
 print('We have {} geotagged rows'.format(len(df_geo)))
 
 print(df_geo.tail())
-# zählen der einzelnen gewerbetypen
-# print(df_geo['Gewerbetyp'].value_counts())
 
 # UTM in WGS84 umrechnen und in neue spalten schreiben
 
@@ -58,8 +56,7 @@ def df_to_geojson(df, properties, lat='lat', lon='lon'):
 
     return geojson
 
-
-useful_columns = ['Firma', 'Gewerbetyp']
+useful_columns = ['Firma', 'Gewerbename', 'Strasse', 'HausNr', 'Stadtteil', 'Gewerbetyp']
 geojson_dict = df_to_geojson(df_geo, properties=useful_columns)
 geojson_str = json.dumps(geojson_dict, indent=2)
 

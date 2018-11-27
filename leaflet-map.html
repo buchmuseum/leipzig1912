@@ -31,6 +31,8 @@
 		id: 'mapbox.streets'
 	}).addTo(mymap);
 
+	
+
 		function onEachFeature(feature, layer) {
 		var popupContent = "<b>" + feature.properties.Firma + "</b><br />" + feature.properties.Gewerbetyp;
 
@@ -40,21 +42,35 @@
 
 		layer.bindPopup(popupContent);
 	}
-var geojsonMarkerOptions = {
-    radius: 5,
-    fillColor: "#ff7800",
-    color: "#000",
-    weight: .8,
-    opacity: 1,
-    fillOpacity: 0.8
-};
 
+
+var geojsonMarkerOptions = {
+		radius: 5,
+    	color: "#000",
+    	weight: .8,
+    	opacity: 1,
+    	fillOpacity: 0.8
+    };
 
 	var dataset = L.geoJSON(dataset, {
+			style: function(feature) {
+        switch (feature.properties.Gewerbetyp) {
+            case 'Ausbildungseinrichtungen': return {fillColor: "#00FFFF"};
+            case 'Buchbinderhandwerk':   return {fillColor: "#FF0000"};
+            case 'Buchhandel und Verlagswesen':   return {fillColor: "#0080FF"};
+            case 'Graphische Anstalt':   return {fillColor: "#00FFFF"};
+            case 'Zuliefer- und Hilfsgewerbe':   return {fillColor: "#0080FF"};
+            case 'Druckereien':   return {fillColor: "#FF8000"};
+            case 'Leihbibliotheken / Lesehallen':   return {fillColor: "#8000FF"};
+            case 'Papierhandlung/Papierherstellung':   return {fillColor: "#80FF00"};
+            case 'Polygraphischer Maschinenbau':   return {fillColor: "#FF00FF"};
+            case 'Satzherstellung':   return {fillColor: "#FF0080"};
 
+        }
+    },
 		pointToLayer: function (feature, latlng) {
 			return L.circleMarker(latlng, geojsonMarkerOptions);
-		},
+			},
 
 		onEachFeature: onEachFeature
 	}).addTo(mymap);
@@ -65,6 +81,24 @@ var geojsonMarkerOptions = {
 
 
 
+/*L.geoJSON(states, {
+    style: function(feature) {
+        switch (feature.properties.Gewerbetyp) {
+            case 'Ausbildungseinrichtungen': return {fillColor: "#00FFFF"};
+            case 'Buchbinderhandwerk':   return {fillColor: "#FF0000"};
+            case 'Buchhandel und Verlagswesen':   return {fillColor: "#0080FF"};
+            case 'Graphische Anstalt':   return {fillColor: "#00FFFF"};
+            case 'Zuliefer- und Hilfsgewerbe':   return {fillColor: "#0080FF"};
+            case 'Druckereien':   return {fillColor: "#FF8000"};
+            case 'Leihbibliotheken / Lesehallen':   return {fillColor: "#8000FF"};
+            case 'Papierhandlung/Papierherstellung':   return {fillColor: "#80FF00"};
+            case 'Polygraphischer Maschinenbau':   return {fillColor: "#FF00FF"};
+            case 'Satzherstellung':   return {fillColor: "#FF0080"};
+
+        }
+    }
+}).addTo(map);
+*/
 
 
 </script>
