@@ -67,3 +67,7 @@ Hier werden die Geojson-Daten mit Leaflet auf einer Karte dargestellt. Work in P
 ## Credits
 
 Die Daten wurden in den 1990er-Jahren im Deutschen Buch- und Schriftmuseum der Deutschen Nationalbibliothek aus dem historischen Adressbuch der Stadt Leipzig (http://d-nb.info/013304410) in eine Access-Datenbank übertragen. Die Geokoordinaten sowie die modernen Adressdaten wurden 2018 vom  Amt für Geoinformation und Bodenordnung, Abteilung Digitale Kartographie der Stadt Leipzig ergänzt.
+
+## License
+
+This repository and its content is licensed under Creative Commons Zero v1.0 Universal, cc0-1.0
